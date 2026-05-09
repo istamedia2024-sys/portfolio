@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,7 +44,8 @@
     .portfolio-hero {
       background:
         linear-gradient(135deg, rgba(11, 31, 59, 0.92), rgba(0, 161, 171, 0.85)),
-         <img src="/Portfolio/images/istamedia Logo.jpg" alt="Istamedia Agency Logo";
+        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80');
+
       background-size: cover;
       background-position: center;
       color: var(--white);
@@ -115,14 +117,12 @@
       border-radius: 24px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-      min-height: 100%;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
     .portfolio-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 18px 45px rgba(11, 31, 59, 0.16);
-      border-color: rgba(0, 161, 171, 0.35);
     }
 
     .card-image {
@@ -131,28 +131,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      overflow: hidden;
       padding: 20px;
-    }
-
-    .card-image::after {
-      content: '';
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      background: rgba(255, 255, 255, 0.12);
-      border-radius: 50%;
-      left: -50px;
-      top: -45px;
     }
 
     .card-image img {
       max-width: 100%;
       max-height: 120px;
       object-fit: contain;
-      position: relative;
-      z-index: 2;
     }
 
     .card-content {
@@ -169,7 +154,7 @@
     }
 
     .card-content p {
-      font-size: 15.5px;
+      font-size: 15px;
       color: #555;
       margin-bottom: 24px;
       flex: 1;
@@ -195,19 +180,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      width: fit-content;
       background: var(--dark-color);
       color: var(--white);
       padding: 10px 18px;
       border-radius: 12px;
       font-size: 14px;
       font-weight: 700;
-      transition: background 0.3s ease;
-    }
-
-    .portfolio-card:hover .visit-btn {
-      background: var(--primary-color);
     }
 
     .portfolio-note {
@@ -219,17 +197,6 @@
       border-right: 6px solid var(--primary-color);
     }
 
-    .portfolio-note h2 {
-      color: var(--dark-color);
-      font-size: 26px;
-      margin-bottom: 12px;
-    }
-
-    .portfolio-note p {
-      color: #555;
-      font-size: 17px;
-    }
-
     @media (max-width: 992px) {
       .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -237,14 +204,6 @@
     }
 
     @media (max-width: 650px) {
-      .portfolio-hero {
-        padding: 65px 18px;
-      }
-
-      .portfolio-section {
-        padding: 50px 16px;
-      }
-
       .portfolio-grid {
         grid-template-columns: 1fr;
       }
@@ -252,166 +211,246 @@
       .card-image {
         height: 170px;
       }
-
-      .portfolio-note {
-        padding: 25px;
-      }
     }
   </style>
 </head>
 
 <body>
+
   <main class="portfolio-page">
 
     <section class="portfolio-hero">
+
       <div class="portfolio-hero-content">
+
         <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:25px;">
-          <img src="/home/ahmad/Desktop/Portfolio/Images/istamedia Logo.jpg" alt="Istamedia Agency Logo" style="width:150px;height:150px;object-fit:contain;border-radius:18px;background:#ffffff;padding:10px;box-shadow:0 8px 25px rgba(0,0,0,0.18);">
+
+          <img src="images/istamedia Agency Logo.jpg"
+            alt="Istamedia Agency Logo"
+            style="width:150px;height:150px;object-fit:contain;border-radius:18px;background:#ffffff;padding:10px;box-shadow:0 8px 25px rgba(0,0,0,0.18);">
+
           <div>
-            <div style="font-size:15px;font-weight:700;letter-spacing:1px;opacity:0.9;">Designed & Developed By</div>
-            <div style="font-size:34px;font-weight:800;line-height:1.2;">Istamedia Agency</div>
+            <div style="font-size:15px;font-weight:700;letter-spacing:1px;opacity:0.9;">
+              Designed & Developed By
+            </div>
+
+            <div style="font-size:34px;font-weight:800;line-height:1.2;">
+              Istamedia Agency
+            </div>
           </div>
+
         </div>
+
         <h1>معرض أعمال تصميم وتطوير المواقع الإلكترونية</h1>
+
         <p>
-          مجموعة من المواقع الإلكترونية التي قمت بتصميمها وتطويرها لقطاعات متنوعة تشمل مواد البناء، العزل، التجارة الصناعية، المتاجر الإلكترونية، التعليم الإلكتروني، والاستشارات الإدارية.
+          مجموعة من المواقع الإلكترونية التي قمت بتصميمها وتطويرها لقطاعات متنوعة تشمل مواد البناء،
+          العزل، التجارة الصناعية، المتاجر الإلكترونية، التعليم الإلكتروني، والاستشارات الإدارية.
         </p>
+
       </div>
+
     </section>
 
     <section class="portfolio-section">
+
       <div class="section-title">
         <span>أعمالي الرقمية</span>
         <h2>نماذج من المواقع التي قمت بتصميمها</h2>
+
         <p>
-          تم تنفيذ هذه المشاريع مع التركيز على الهوية البصرية، تجربة المستخدم، التصميم المتجاوب، تحسين محركات البحث، وتقديم المحتوى بشكل احترافي يعكس نشاط كل شركة.
+          تم تنفيذ هذه المشاريع مع التركيز على الهوية البصرية،
+          تجربة المستخدم، التصميم المتجاوب، وتحسين محركات البحث.
         </p>
       </div>
 
       <div class="portfolio-grid">
 
-        <a href="https://fixper.com.tr/" target="_blank" rel="noopener" class="portfolio-card">
-          <div class="card-image"><img src="images/Fixper-Insulation-Logo.png" alt="Fixper Logo"></div>
+        <a href="https://fixper.com.tr/" target="_blank" class="portfolio-card">
+          <div class="card-image">
+            <img src="images/Fixper-Insulation-Logo.png" alt="Fixper">
+          </div>
+
           <div class="card-content">
             <h3>Fixper Insulation</h3>
-            <p>موقع متخصص بمنتجات العزل الحراري والمائي والصوتي ومواد الحماية للبناء الحديث، تم تطويره مع التركيز على التصميم الاحترافي وتحسين محركات البحث SEO لتعزيز الظهور الرقمي وتجربة المستخدم.</p>
+
+            <p>
+              موقع متخصص بمنتجات العزل وتم تطويره مع التركيز على التصميم الاحترافي وتحسين SEO.
+            </p>
+
             <div class="card-meta">
-              <span>مواد بناء</span>
               <span>عزل</span>
-              <span>موقع شركة</span>
+              <span>SEO</span>
+              <span>شركة</span>
             </div>
-            <div class="visit-btn">زيارة الموقع ←</div>
+
+            <div class="visit-btn">زيارة الموقع</div>
           </div>
         </a>
 
-        <a href="https://www.rakaezalarab.com/" target="_blank" rel="noopener" class="portfolio-card">
-          <div class="card-image"><img src="images/Rakaez-Alarab-Logo.png" alt="Rakaez Al Arab Logo"></div>
+        <a href="https://www.rakaezalarab.com/" target="_blank" class="portfolio-card">
+          <div class="card-image">
+            <img src="images/Rakaez-Alarab-Logo.png" alt="Rakaez">
+          </div>
+
           <div class="card-content">
             <h3>Rakaez Al Arab</h3>
-            <p>موقع شركة متخصصة في تجارة البوليمرات وخردة الألمنيوم والمواد الخام والحلول الصناعية.</p>
+
+            <p>
+              موقع متخصص بالتجارة الصناعية والبوليمرات والمواد الخام.
+            </p>
+
             <div class="card-meta">
-              <span>تجارة صناعية</span>
+              <span>تجارة</span>
               <span>بوليمرات</span>
-              <span>مواد خام</span>
             </div>
-            <div class="visit-btn">زيارة الموقع ←</div>
+
+            <div class="visit-btn">زيارة الموقع</div>
           </div>
         </a>
 
-        <a href="https://qalalamiah.com/" target="_blank" rel="noopener" class="portfolio-card">
-          <div class="card-image"><img src="images/Qimam Alalamiah-Logo.webp" alt="Qimam Alalamiah Logo"></div>
+        <a href="https://qalalamiah.com/" target="_blank" class="portfolio-card">
+          <div class="card-image">
+            <img src="images/Qimam Alalamiah-Logo.webp" alt="Qimam">
+          </div>
+
           <div class="card-content">
             <h3>Qimam Alalamiah</h3>
-            <p>موقع شركة صناعية متخصصة بحبيبات البلاستيك والمواد البوليمرية والحلول الصناعية.</p>
+
+            <p>
+              موقع صناعي متخصص بالمواد البلاستيكية والحلول الصناعية.
+            </p>
+
             <div class="card-meta">
               <span>صناعة</span>
               <span>بلاستيك</span>
-              <span>حلول صناعية</span>
             </div>
-            <div class="visit-btn">زيارة الموقع ←</div>
+
+            <div class="visit-btn">زيارة الموقع</div>
           </div>
         </a>
 
-        <a href="https://sajyatextile.com/" target="_blank" rel="noopener" class="portfolio-card">
-          <div class="card-image"><img src="images/Sajya Textile Logo.png" alt="Sajya Textile Logo"></div>
+        <a href="https://sajyatextile.com/" target="_blank" class="portfolio-card">
+          <div class="card-image">
+            <img src="images/Sajya Textile Logo.png" alt="Sajya">
+          </div>
+
           <div class="card-content">
             <h3>Sajya Textile</h3>
-            <p>متجر إلكتروني للمنسوجات والمفروشات المنزلية الفاخرة ومنتجات الأقمشة.</p>
+
+            <p>
+              متجر إلكتروني للمفروشات والمنسوجات المنزلية.
+            </p>
+
             <div class="card-meta">
-              <span>متجر إلكتروني</span>
-              <span>منسوجات</span>
               <span>WooCommerce</span>
+              <span>متجر إلكتروني</span>
             </div>
-            <div class="visit-btn">زيارة الموقع ←</div>
+
+            <div class="visit-btn">زيارة الموقع</div>
           </div>
         </a>
 
-        <a href="https://myenglishgate.com/" target="_blank" rel="noopener" class="portfolio-card">
-          <div class="card-image"><img src="images/My English Gate Logo.png" alt="My English Gate Logo"></div>
+        <a href="https://myenglishgate.com/" target="_blank" class="portfolio-card">
+          <div class="card-image">
+            <img src="images/My English Gate Logo.png" alt="MEG">
+          </div>
+
           <div class="card-content">
             <h3>My English Gate</h3>
-            <p>منصة تعليمية إلكترونية لتعليم اللغة الإنجليزية والدورات التعليمية أونلاين.</p>
+
+            <p>
+              منصة تعليمية إلكترونية لتعليم اللغة الإنجليزية.
+            </p>
+
             <div class="card-meta">
-              <span>تعليم إلكتروني</span>
-              <span>دورات</span>
               <span>LMS</span>
+              <span>تعليم</span>
             </div>
-            <div class="visit-btn">زيارة الموقع ←</div>
+
+            <div class="visit-btn">زيارة الموقع</div>
           </div>
         </a>
 
-        <a href="https://masaraldiriyah.com/" target="_blank" rel="noopener" class="portfolio-card">
-          <div class="card-image"><img src="images/Masar A l Diriyah Logo.png" alt="Masar Al Diriyah Logo"></div>
+        <a href="https://masaraldiriyah.com/" target="_blank" class="portfolio-card">
+          <div class="card-image">
+            <img src="images/Masar Al Diriyah Logo.png" alt="Masar">
+          </div>
+
           <div class="card-content">
             <h3>Masar Al Diriyah</h3>
-            <p>موقع شركة استشارات إدارية وتطوير أعمال وحلول مؤسسية واستراتيجية.</p>
+
+            <p>
+              موقع استشارات إدارية وتطوير أعمال.
+            </p>
+
             <div class="card-meta">
               <span>استشارات</span>
               <span>إدارة</span>
-              <span>تطوير أعمال</span>
             </div>
-            <div class="visit-btn">زيارة الموقع ←</div>
+
+            <div class="visit-btn">زيارة الموقع</div>
           </div>
         </a>
 
-        <a href="https://tfgbuilding.com/" target="_blank" rel="noopener" class="portfolio-card">
-          <div class="card-image"><img src="images/TFG Building logo.png" alt="Turkish Future Group Logo"></div>
+        <a href="https://tfgbuilding.com/" target="_blank" class="portfolio-card">
+          <div class="card-image">
+            <img src="images/TFG Building logo.png" alt="TFG">
+          </div>
+
           <div class="card-content">
             <h3>Turkish Future Group</h3>
-            <p>موقع متخصص بحلول البناء ومواد الإكساء والعزل والاستشارات الهندسية وتنفيذ المشاريع.</p>
+
+            <p>
+              موقع لحلول البناء والعزل وتنفيذ المشاريع.
+            </p>
+
             <div class="card-meta">
-              <span>حلول بناء</span>
+              <span>بناء</span>
               <span>إكساء</span>
-              <span>تنفيذ مشاريع</span>
             </div>
-            <div class="visit-btn">زيارة الموقع ←</div>
+
+            <div class="visit-btn">زيارة الموقع</div>
           </div>
         </a>
 
-        <a href="https://www.syrian-lawyer.club/" target="_blank" rel="noopener" class="portfolio-card">
-          <div class="card-image"><img src="images/Syrian Lawer Club Logo.webp" alt="Syrian Lawyer Club Logo"></div>
+        <a href="https://www.syrian-lawyer.club/" target="_blank" class="portfolio-card">
+          <div class="card-image">
+            <img src="images/Syrian Lawer Club Logo.webp" alt="Lawyer">
+          </div>
+
           <div class="card-content">
             <h3>Syrian Lawyer Club</h3>
-            <p>موقع قانوني احترافي يقدم محتوى وخدمات متخصصة في المجال القانوني والاستشارات القانونية.</p>
+
+            <p>
+              موقع قانوني احترافي للخدمات والاستشارات القانونية.
+            </p>
+
             <div class="card-meta">
               <span>قانون</span>
               <span>استشارات</span>
-              <span>موقع احترافي</span>
             </div>
-            <div class="visit-btn">زيارة الموقع ←</div>
+
+            <div class="visit-btn">زيارة الموقع</div>
           </div>
         </a>
 
       </div>
 
       <div class="portfolio-note">
+
         <h2>نبذة عن أسلوب العمل</h2>
+
         <p>
-          تم تصميم هذه المواقع لتقديم صورة احترافية للشركات، مع مراعاة وضوح الرسالة التسويقية، سهولة التصفح، توافق التصميم مع مختلف الأجهزة، وبناء صفحات تساعد على تحسين الظهور في محركات البحث.
+          تم تصميم هذه المواقع لتقديم صورة احترافية للشركات،
+          مع مراعاة تجربة المستخدم والتوافق مع مختلف الأجهزة.
         </p>
+
       </div>
+
     </section>
 
   </main>
+
 </body>
 </html>
