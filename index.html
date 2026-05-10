@@ -1,390 +1,147 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>معرض أعمال تصميم المواقع الإلكترونية</title>
+
+  <title>Ista Media</title>
+
+  <meta name="description" content="Contact Ista Media through phone, WhatsApp, or email." />
 
   <style>
-    :root {
-      --primary-color: #008080;
-      --secondary-color: #00A1AB;
-      --dark-color: #0B1F3B;
-      --text-color: #333333;
-      --light-bg: #f5f8fa;
-      --white: #ffffff;
-      --border-color: #e5eaf0;
-      --shadow: 0 12px 35px rgba(11, 31, 59, 0.10);
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    body{
+      font-family:Arial, sans-serif;
+      background:#f4f7fb;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+      color:#222;
     }
 
-    body {
-      font-family: Tahoma, Arial, sans-serif;
-      background: var(--light-bg);
-      color: var(--text-color);
-      line-height: 1.8;
+    .contact-wrapper{
+      width:100%;
+      max-width:550px;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    .contact-card{
+      background:#ffffff;
+      border-radius:22px;
+      padding:50px 35px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.08);
+      text-align:center;
     }
 
-    .portfolio-page {
-      width: 100%;
-      overflow: hidden;
+    .contact-card h1{
+      font-size:38px;
+      margin-bottom:15px;
+      color:#0B1F3B;
+      font-weight:700;
     }
 
-    .portfolio-hero {
-      background:
-        linear-gradient(135deg, rgba(11, 31, 59, 0.92), rgba(0, 161, 171, 0.85)),
-        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80');
-
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      padding: 90px 20px;
-      text-align: center;
+    .contact-card p{
+      font-size:17px;
+      line-height:1.7;
+      color:#666;
+      margin-bottom:35px;
     }
 
-    .portfolio-hero-content {
-      max-width: 950px;
-      margin: 0 auto;
+    .contact-buttons{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
     }
 
-    .portfolio-hero h1 {
-      font-size: clamp(32px, 5vw, 56px);
-      margin-bottom: 22px;
-      font-weight: 800;
+    .contact-btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      text-decoration:none;
+      padding:18px 20px;
+      border-radius:14px;
+      font-size:18px;
+      font-weight:600;
+      transition:0.3s ease;
     }
 
-    .portfolio-hero p {
-      font-size: clamp(16px, 2vw, 21px);
-      max-width: 850px;
-      margin: 0 auto;
-      opacity: 0.95;
+    .contact-btn:hover{
+      transform:translateY(-4px);
     }
 
-    .portfolio-section {
-      max-width: 1250px;
-      margin: 0 auto;
-      padding: 70px 20px;
+    .phone-btn{
+      background:#0B1F3B;
+      color:#fff;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
+    .whatsapp-btn{
+      background:#25D366;
+      color:#fff;
     }
 
-    .section-title span {
-      display: inline-block;
-      color: var(--primary-color);
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 8px;
+    .email-btn{
+      background:#eceff3;
+      color:#0B1F3B;
     }
 
-    .section-title h2 {
-      color: var(--dark-color);
-      font-size: clamp(28px, 4vw, 42px);
-      margin-bottom: 14px;
-    }
+    @media(max-width:768px){
 
-    .section-title p {
-      max-width: 760px;
-      margin: 0 auto;
-      color: #555;
-      font-size: 17px;
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-
-    .portfolio-card {
-      display: flex;
-      flex-direction: column;
-      background: var(--white);
-      border: 1px solid var(--border-color);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .portfolio-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 45px rgba(11, 31, 59, 0.16);
-    }
-
-    .card-image {
-      height: 190px;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .card-image img {
-      max-width: 100%;
-      max-height: 120px;
-      object-fit: contain;
-    }
-
-    .card-content {
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .card-content h3 {
-      color: var(--dark-color);
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .card-content p {
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 24px;
-      flex: 1;
-    }
-
-    .card-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 22px;
-    }
-
-    .card-meta span {
-      background: #eef8f8;
-      color: var(--primary-color);
-      padding: 5px 11px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .visit-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--dark-color);
-      color: var(--white);
-      padding: 10px 18px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .portfolio-note {
-      margin-top: 55px;
-      background: var(--white);
-      border-radius: 24px;
-      padding: 35px;
-      box-shadow: var(--shadow);
-      border-right: 6px solid var(--primary-color);
-    }
-
-    .contact-section {
-      background: var(--dark-color);
-      padding: 60px 20px;
-      text-align: center;
-      color: #ffffff;
-      margin-top: 70px;
-    }
-
-    .contact-section h2 {
-      font-size: 36px;
-      margin-bottom: 18px;
-    }
-
-    .contact-section p {
-      color: #d9e5ec;
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .whatsapp-btn,
-    .phone-btn {
-      padding: 15px 28px;
-      border-radius: 14px;
-      font-size: 17px;
-      font-weight: 700;
-      color: #ffffff;
-      transition: 0.3s ease;
-    }
-
-    .whatsapp-btn {
-      background: #25D366;
-    }
-
-    .phone-btn {
-      background: var(--primary-color);
-    }
-
-    .whatsapp-btn:hover,
-    .phone-btn:hover {
-      transform: translateY(-3px);
-      opacity: 0.92;
-    }
-
-    @media (max-width: 992px) {
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 650px) {
-      .portfolio-grid {
-        grid-template-columns: 1fr;
+      .contact-card{
+        padding:40px 25px;
       }
 
-      .card-image {
-        height: 170px;
+      .contact-card h1{
+        font-size:30px;
       }
 
-      .contact-section h2 {
-        font-size: 28px;
+      .contact-btn{
+        font-size:16px;
+        padding:16px;
       }
+
     }
   </style>
 </head>
 
 <body>
 
-  <main class="portfolio-page">
+  <div class="contact-wrapper">
 
-    <section class="portfolio-hero">
+    <div class="contact-card">
 
-      <div class="portfolio-hero-content">
-
-        <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:25px;">
-
-          <img src="images/istamedia Agency Logo.jpg"
-            alt="Istamedia Agency Logo"
-            style="width:150px;height:150px;object-fit:contain;border-radius:18px;background:#ffffff;padding:10px;box-shadow:0 8px 25px rgba(0,0,0,0.18);">
-
-          <div>
-            <div style="font-size:15px;font-weight:700;letter-spacing:1px;opacity:0.9;">
-              Designed & Developed By
-            </div>
-
-            <div style="font-size:34px;font-weight:800;line-height:1.2;">
-              Istamedia Agency
-            </div>
-          </div>
-
-        </div>
-
-        <h1>معرض أعمال تصميم وتطوير المواقع الإلكترونية</h1>
-
-        <p>
-          مجموعة من المواقع الإلكترونية التي قمت بتصميمها وتطويرها لقطاعات متنوعة تشمل مواد البناء،
-          العزل، التجارة الصناعية، المتاجر الإلكترونية، التعليم الإلكتروني، والاستشارات الإدارية.
-        </p>
-
-      </div>
-
-    </section>
-
-    <section class="portfolio-section">
-
-      <div class="section-title">
-        <span>أعمالي الرقمية</span>
-
-        <h2>نماذج من المواقع التي قمت بتصميمها</h2>
-
-        <p>
-          تم تنفيذ هذه المشاريع مع التركيز على الهوية البصرية،
-          تجربة المستخدم، التصميم المتجاوب، وتحسين محركات البحث.
-        </p>
-      </div>
-
-      <div class="portfolio-grid">
-
-        <a href="https://fixper.com.tr/" target="_blank" class="portfolio-card">
-          <div class="card-image">
-            <img src="images/Fixper-Insulation-Logo.png" alt="Fixper">
-          </div>
-
-          <div class="card-content">
-            <h3>Fixper Insulation</h3>
-
-            <p>
-              موقع متخصص بمنتجات العزل وتم تطويره مع التركيز على التصميم الاحترافي وتحسين SEO.
-            </p>
-
-            <div class="card-meta">
-              <span>عزل</span>
-              <span>SEO</span>
-              <span>شركة</span>
-            </div>
-
-            <div class="visit-btn">زيارة الموقع</div>
-          </div>
-        </a>
-
-      </div>
-
-      <div class="portfolio-note">
-
-        <h2>نبذة عن أسلوب العمل</h2>
-
-        <p>
-          تم تصميم هذه المواقع لتقديم صورة احترافية للشركات،
-          مع مراعاة تجربة المستخدم والتوافق مع مختلف الأجهزة.
-        </p>
-
-      </div>
-
-    </section>
-
-    <section class="contact-section">
-
-      <h2>تواصل معنا</h2>
+      <h1>Ista Media</h1>
 
       <p>
-        للاستفسارات والتواصل المباشر عبر واتساب أو الهاتف
+        Contact us directly through phone, WhatsApp, or email for inquiries and services.
       </p>
 
       <div class="contact-buttons">
 
-        <a href="https://wa.me/905523849474"
-           target="_blank"
-           class="whatsapp-btn">
-          WhatsApp: +90 552 384 94 74
+        <a class="contact-btn phone-btn" href="tel:+905523849474">
+          +90 552 384 9474
         </a>
 
-        <a href="tel:+905523849474"
-           class="phone-btn">
-          Phone: +90 552 384 94 74
+        <a class="contact-btn whatsapp-btn" href="https://wa.me/905523849474" target="_blank">
+          WhatsApp
+        </a>
+
+        <a class="contact-btn email-btn" href="mailto:istamedia2024@gmail.com">
+          istamedia2024@gmail.com
         </a>
 
       </div>
 
-    </section>
+    </div>
 
-  </main>
+  </div>
 
 </body>
 
