@@ -1,3 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>وكالة استاميديا | معرض أعمال تصميم المواقع</title>
+
+<meta name="description" content="معرض أعمال وكالة استاميديا في تصميم المواقع، تطوير ووردبريس، تحسين محركات البحث، التسويق الرقمي، الهوية البصرية، وحلول الأعمال الرقمية.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f7fb;
+  color:#1f2937;
+  line-height:1.8;
+  direction:rtl;
+  text-align:right;
+}
+
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:#fff;
+  box-shadow:0 4px 18px rgba(0,0,0,0.08);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo-wrap img{
+  width:155px;
+  height:auto;
+}
+
+.menu{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.menu a{
+  font-size:16px;
+  font-weight:700;
+  color:#0B1F3B;
+  transition:0.3s;
+}
+
+.menu a:hover{color:#00A1AB}
+
+.arabic-btn{
+  background:#00A1AB;
+  color:#fff!important;
+  padding:9px 18px;
+  border-radius:30px;
+}
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  background:
+  linear-gradient(rgba(11,31,59,.88),rgba(11,31,59,.88)),
+  url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+}
+
+.hero-content{
+  max-width:900px;
+  margin:auto;
+  padding:80px 0;
+}
+
+.hero h1{
+  font-size:54px;
+  line-height:1.25;
+  margin-bottom:22px;
+}
+
+.hero p{
+  font-size:20px;
+  max-width:760px;
+  margin:0 auto 35px;
+  color:#e5e7eb;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:40px;
+  font-weight:700;
+  background:#00A1AB;
+  color:#fff;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#008080;
+  transform:translateY(-3px);
+}
+
+section{padding:90px 0}
+
+.section-title{
+  text-align:center;
+  margin-bottom:55px;
+}
+
+.section-title h2{
+  font-size:38px;
+  color:#0B1F3B;
+  margin-bottom:12px;
+}
+
+.section-title p{
+  max-width:760px;
+  margin:auto;
+  color:#4b5563;
+  font-size:17px;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.about-card{
+  background:#fff;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.about-card h3{
+  font-size:28px;
+  color:#0B1F3B;
+  margin-bottom:15px;
+}
+
+.about-card p{
+  color:#4b5563;
+  margin-bottom:15px;
+}
+
+.skills{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.skill-box{
+  background:#fff;
+  padding:20px;
+  border-right:5px solid #00A1AB;
+  border-radius:14px;
+  font-weight:700;
+  color:#0B1F3B;
+  box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.services{background:#fff}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.service-card{
+  background:#f5f7fb;
+  padding:32px;
+  border-radius:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  transition:.3s;
+}
+
+.service-card:hover{transform:translateY(-7px)}
+
+.service-icon{
+  width:58px;
+  height:58px;
+  background:#00A1AB;
+  color:#fff;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.service-card h3{
+  color:#0B1F3B;
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+.service-card p{
+  color:#4b5563;
+  font-size:15.5px;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.project-card{
+  background:#fff;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.project-card:hover{transform:translateY(-7px)}
+
+.project-logo{
+  height:210px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:35px;
+  background:#f9fafb;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.project-logo img{
+  max-height:130px;
+  max-width:85%;
+  object-fit:contain;
+}
+
+.project-content{
+  padding:26px;
+}
+
+.project-content h3{
+  color:#0B1F3B;
+  font-size:23px;
+  margin-bottom:10px;
+}
+
+.project-content p{
+  color:#4b5563;
+  margin-bottom:18px;
+  font-size:15.5px;
+}
+
+.tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.tags span{
+  background:#e6f7f8;
+  color:#008080;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.project-link{
+  color:#00A1AB;
+  font-weight:800;
+}
+
+.contact{
+  background:#0B1F3B;
+  color:#fff;
+  text-align:center;
+}
+
+.contact .section-title h2,
+.contact .section-title p{color:#fff}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.contact-card{
+  background:rgba(255,255,255,.08);
+  padding:28px;
+  border-radius:20px;
+}
+
+.contact-card h3{
+  color:#48C6EF;
+  margin-bottom:10px;
+}
+
+.contact-card a{
+  color:#fff;
+  font-weight:700;
+}
+
+footer{
+  background:#07162b;
+  color:#cbd5e1;
+  text-align:center;
+  padding:24px 15px;
+  font-size:14px;
+}
+
+@media(max-width:992px){
+  .about-grid,
+  .services-grid,
+  .projects-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{font-size:40px}
+}
+
+@media(max-width:768px){
+  .nav{
+    flex-direction:column;
+    padding:16px 0;
+  }
+
+  .menu{
+    justify-content:center;
+    gap:15px;
+  }
+
+  .logo-wrap img{width:135px}
+
+  .hero h1{font-size:32px}
+
+  .hero p{font-size:17px}
+
+  section{padding:65px 0}
+}
+</style>
+</head>
+
+<body>
+
 <header>
   <div class="container nav">
     <a href="#" class="logo-wrap">
@@ -17,469 +387,294 @@
 <section class="hero">
   <div class="container hero-content">
     <h1>معرض أعمال تصميم المواقع والتسويق الرقمي</h1>
-
     <p>
       مواقع إلكترونية حديثة، تحسين محركات البحث، تطوير ووردبريس،
       الهوية البصرية، وحلول التسويق الرقمي للشركات والعلامات التجارية.
     </p>
-
     <a href="#projects" class="btn">عرض المشاريع</a>
   </div>
 </section>
 
 <section id="about">
   <div class="container">
-
     <div class="section-title">
       <h2>حول وكالة استاميديا</h2>
-
       <p>
-        معرض أعمال رقمي احترافي من أحمد سمرة،
-        متخصص في تصميم المواقع، تطوير ووردبريس،
-        تحسين محركات البحث، الهوية البصرية، والتسويق الرقمي.
+        معرض أعمال رقمي احترافي من أحمد سمرة، متخصص في تصميم المواقع،
+        تطوير ووردبريس، تحسين محركات البحث، الهوية البصرية، والتسويق الرقمي.
       </p>
     </div>
 
     <div class="about-grid">
-
       <div class="about-card">
-
         <h3>حلول رقمية إبداعية</h3>
-
         <p>
           تساعد وكالة استاميديا الشركات على بناء حضور رقمي قوي
-          من خلال مواقع احترافية، محتوى محسّن،
-          هوية بصرية مميزة، واستراتيجيات تسويق رقمي فعالة.
+          من خلال مواقع احترافية، محتوى محسّن، هوية بصرية مميزة،
+          واستراتيجيات تسويق رقمي فعالة.
         </p>
-
         <p>
           يتم تصميم كل مشروع بعناية مع التركيز على تجربة المستخدم،
-          التصميم المتجاوب، تناسق الهوية،
-          وتحسين الظهور في محركات البحث.
+          التصميم المتجاوب، تناسق الهوية، وتحسين الظهور في محركات البحث.
         </p>
-
       </div>
 
       <div class="skills">
-
         <div class="skill-box">تطوير ووردبريس</div>
         <div class="skill-box">تحسين محركات البحث SEO</div>
         <div class="skill-box">تصميم المواقع</div>
         <div class="skill-box">متاجر WooCommerce</div>
         <div class="skill-box">تصميم واجهات وتجربة المستخدم</div>
         <div class="skill-box">التسويق الرقمي</div>
-
       </div>
-
     </div>
-
   </div>
 </section>
 
 <section id="services" class="services">
-
   <div class="container">
-
     <div class="section-title">
-
       <h2>الخدمات</h2>
-
       <p>
-        خدمات رقمية احترافية لدعم الشركات،
-        تحسين الظهور الرقمي،
+        خدمات رقمية احترافية لدعم الشركات، تحسين الظهور الرقمي،
         وزيادة التفاعل مع العملاء.
       </p>
-
     </div>
 
     <div class="services-grid">
-
       <div class="service-card">
-
         <div class="service-icon">💻</div>
-
         <h3>تصميم المواقع</h3>
-
         <p>
-          تصميم مواقع حديثة ومتجاوبة للشركات،
-          المعارض، ومقدمي الخدمات.
+          تصميم مواقع حديثة ومتجاوبة للشركات، المعارض، ومقدمي الخدمات.
         </p>
-
       </div>
 
       <div class="service-card">
-
         <div class="service-icon">🔍</div>
-
         <h3>تحسين محركات البحث</h3>
-
         <p>
-          بنية مواقع متوافقة مع SEO،
-          محتوى محسّن،
-          وصف ميتا،
-          وتحسينات تقنية متقدمة.
+          بنية مواقع متوافقة مع SEO، محتوى محسّن، وصف ميتا،
+          نصوص بديلة للصور، وتحسينات تقنية متقدمة.
         </p>
-
       </div>
 
       <div class="service-card">
-
         <div class="service-icon">🛒</div>
-
         <h3>متاجر WooCommerce</h3>
-
         <p>
-          مواقع عرض المنتجات،
-          متاجر WooCommerce،
-          وصفحات منتجات احترافية
-          بتصاميم تركز على التحويلات.
+          مواقع عرض المنتجات، متاجر WooCommerce، صفحات منتجات احترافية،
+          وتصاميم تركز على التحويلات.
         </p>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 <section id="projects">
-
   <div class="container">
-
     <div class="section-title">
-
       <h2>أبرز مشاريع المواقع</h2>
-
       <p>
-        مجموعة من المواقع المصممة لقطاعات الأعمال،
-        الصناعة، التجارة الإلكترونية،
-        التعليم، والاستشارات والخدمات المهنية.
+        مجموعة من المواقع المصممة لقطاعات الأعمال، الصناعة،
+        التجارة الإلكترونية، التعليم، الاستشارات، والخدمات المهنية.
       </p>
-
     </div>
 
     <div class="projects-grid">
 
       <div class="project-card">
-
         <div class="project-logo">
           <img src="images/TFG Building logo.png" alt="شعار Turkish Future Group">
         </div>
-
         <div class="project-content">
-
           <h3>Turkish Future Group</h3>
-
           <p>
-            موقع حلول بناء متخصص بمواد البناء،
-            أنظمة العزل،
-            الكلادينغ،
-            وعرض شركات المجموعة.
+            موقع حلول بناء متخصص بمواد البناء، أنظمة العزل،
+            الكلادينغ، وعرض شركات المجموعة.
           </p>
-
           <div class="tags">
             <span>ووردبريس</span>
             <span>SEO</span>
             <span>صناعي</span>
           </div>
-
-          <a class="project-link"
-          href="https://tfgbuilding.com/"
-          target="_blank">
-          زيارة الموقع →
-          </a>
-
+          <a class="project-link" href="https://tfgbuilding.com/" target="_blank">زيارة الموقع ←</a>
         </div>
-
       </div>
 
       <div class="project-card">
-
         <div class="project-logo">
           <img src="images/Syrian Lawer Club Logo.webp" alt="شعار Syrian Lawyer Club">
         </div>
-
         <div class="project-content">
-
           <h3>Syrian Lawyer Club</h3>
-
           <p>
-            منصة قانونية احترافية
-            تهدف إلى تقديم هوية رقمية منظمة
+            منصة قانونية احترافية تهدف إلى تقديم هوية رقمية منظمة
             وخدمات قانونية متخصصة.
           </p>
-
           <div class="tags">
             <span>قانوني</span>
             <span>مجتمع</span>
             <span>موقع إلكتروني</span>
           </div>
-
-          <a class="project-link" href="#contact">
-          تفاصيل المشروع →
-          </a>
-
+          <a class="project-link" href="#contact">تفاصيل المشروع ←</a>
         </div>
-
       </div>
 
       <div class="project-card">
-
         <div class="project-logo">
           <img src="images/Sajya Textile Logo.png" alt="شعار Sajya Textile">
         </div>
-
         <div class="project-content">
-
           <h3>Sajya Textile</h3>
-
           <p>
-            متجر WooCommerce لعرض المنتجات،
-            التصنيفات،
+            متجر WooCommerce لعرض المنتجات، التصنيفات،
             وتصفح المنتجات عبر الإنترنت.
           </p>
-
           <div class="tags">
             <span>WooCommerce</span>
             <span>كتالوج</span>
             <span>أقمشة</span>
           </div>
-
-          <a class="project-link"
-          href="https://sajyatextile.com/"
-          target="_blank">
-          زيارة الموقع →
-          </a>
-
+          <a class="project-link" href="https://sajyatextile.com/" target="_blank">زيارة الموقع ←</a>
         </div>
-
       </div>
 
       <div class="project-card">
-
         <div class="project-logo">
           <img src="images/Rakaez-Alarab-Logo.png" alt="شعار Rakaez Alarab">
         </div>
-
         <div class="project-content">
-
           <h3>Rakaez Alarab</h3>
-
           <p>
-            موقع أعمال احترافي يركز على
-            الهوية البصرية،
-            والعرض الرقمي،
-            والهوية المؤسسية الحديثة.
+            موقع أعمال احترافي يركز على الهوية البصرية،
+            العرض الرقمي، والهوية المؤسسية الحديثة.
           </p>
-
           <div class="tags">
             <span>أعمال</span>
             <span>هوية بصرية</span>
             <span>مؤسسات</span>
           </div>
-
-          <a class="project-link" href="#contact">
-          تفاصيل المشروع →
-          </a>
-
+          <a class="project-link" href="#contact">تفاصيل المشروع ←</a>
         </div>
-
       </div>
 
       <div class="project-card">
-
         <div class="project-logo">
           <img src="images/Qimam Alalamiah-Logo.webp" alt="شعار Qimam Alalamiah">
         </div>
-
         <div class="project-content">
-
           <h3>Qimam Alalamiah</h3>
-
           <p>
-            مشروع عرض أعمال احترافي
-            بهوية بصرية حديثة
+            مشروع عرض أعمال احترافي بهوية بصرية حديثة
             وتجربة رقمية منظمة.
           </p>
-
           <div class="tags">
             <span>أعمال</span>
             <span>هوية</span>
             <span>تصميم</span>
           </div>
-
-          <a class="project-link" href="#contact">
-          تفاصيل المشروع →
-          </a>
-
+          <a class="project-link" href="#contact">تفاصيل المشروع ←</a>
         </div>
-
       </div>
 
       <div class="project-card">
-
         <div class="project-logo">
           <img src="images/My English Gate Logo.png" alt="شعار My English Gate">
         </div>
-
         <div class="project-content">
-
           <h3>My English Gate</h3>
-
           <p>
-            منصة تعليم إلكتروني
-            لدورات اللغة الإنجليزية،
-            وإدارة الطلاب،
-            والعلامة التعليمية الاحترافية.
+            منصة تعليم إلكتروني لدورات اللغة الإنجليزية،
+            وإدارة الطلاب، والعلامة التعليمية الاحترافية.
           </p>
-
           <div class="tags">
             <span>LMS</span>
             <span>تعليم</span>
             <span>دورات</span>
           </div>
-
-          <a class="project-link"
-          href="https://myenglishgate.com/"
-          target="_blank">
-          زيارة الموقع →
-          </a>
-
+          <a class="project-link" href="https://myenglishgate.com/" target="_blank">زيارة الموقع ←</a>
         </div>
-
       </div>
 
       <div class="project-card">
-
         <div class="project-logo">
           <img src="images/Masar A l Diriyah Logo.png" alt="شعار Masar Al Diriyah">
         </div>
-
         <div class="project-content">
-
           <h3>Masar Al Diriyah</h3>
-
           <p>
-            موقع استشارات إدارية
-            بتصميم ثنائي اللغة،
-            وهوية أعمال احترافية،
-            وعرض خدمات مؤسسي.
+            موقع استشارات إدارية بتصميم ثنائي اللغة،
+            هوية أعمال احترافية، وعرض خدمات مؤسسي.
           </p>
-
           <div class="tags">
             <span>مؤسسات</span>
             <span>استشارات</span>
             <span>ثنائي اللغة</span>
           </div>
-
-          <a class="project-link"
-          href="https://masaraldiriyah.com/"
-          target="_blank">
-          زيارة الموقع →
-          </a>
-
+          <a class="project-link" href="https://masaraldiriyah.com/" target="_blank">زيارة الموقع ←</a>
         </div>
-
       </div>
 
       <div class="project-card">
-
         <div class="project-logo">
           <img src="images/Fixper-Insulation-Logo.png" alt="شعار Fixper Insulation">
         </div>
-
         <div class="project-content">
-
           <h3>Fixper Insulation</h3>
-
           <p>
-            موقع متخصص بحلول العزل،
-            مواد العزل الحراري،
-            أنظمة العزل المائي،
-            والمواد الإنشائية الحديثة.
+            موقع متخصص بحلول العزل، مواد العزل الحراري،
+            أنظمة العزل المائي، والمواد الإنشائية الحديثة.
           </p>
-
           <div class="tags">
             <span>عزل</span>
             <span>إنشاءات</span>
             <span>منتجات</span>
           </div>
-
-          <a class="project-link" href="#contact">
-          تفاصيل المشروع →
-          </a>
-
+          <a class="project-link" href="#contact">تفاصيل المشروع ←</a>
         </div>
-
       </div>
 
     </div>
-
   </div>
-
 </section>
 
 <section id="contact" class="contact">
-
   <div class="container">
-
     <div class="section-title">
-
       <h2>تواصل مع وكالة استاميديا</h2>
-
       <p>
-        لتصميم المواقع،
-        تحسين محركات البحث،
-        التسويق الرقمي،
+        لتصميم المواقع، تحسين محركات البحث، التسويق الرقمي،
         والحلول الرقمية للأعمال.
       </p>
-
     </div>
 
     <div class="contact-grid">
-
       <div class="contact-card">
-
         <h3>البريد الإلكتروني</h3>
-
         <p>
-          <a href="mailto:istamedia2024@gmail.com">
-          istamedia2024@gmail.com
-          </a>
+          <a href="mailto:istamedia2024@gmail.com">istamedia2024@gmail.com</a>
         </p>
-
       </div>
 
       <div class="contact-card">
-
         <h3>الهاتف وواتساب</h3>
-
         <p>
-          <a href="https://wa.me/905523849474" target="_blank">
-          +90 552 384 9474
-          </a>
+          <a href="https://wa.me/905523849474" target="_blank">+90 552 384 9474</a>
         </p>
-
       </div>
 
       <div class="contact-card">
-
         <h3>الموقع</h3>
-
         <p>تركيا</p>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 <footer>
-  <p>
-    © 2026 وكالة استاميديا.
-    جميع الحقوق محفوظة.
-  </p>
+  <p>© 2026 وكالة استاميديا. جميع الحقوق محفوظة.</p>
 </footer>
+
+</body>
+</html>
